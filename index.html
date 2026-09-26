@@ -44,6 +44,18 @@
   .nav a:hover{color:var(--forest);}
   @media(max-width:600px){.nav ul{gap:14px;}}
 
+  /* experience */
+  .timeline{margin-top:6px;}
+  .timeline-item{border-left:2px solid var(--line);padding:2px 0 28px 22px;position:relative;}
+  .timeline-item:last-child{padding-bottom:0;}
+  .timeline-item::before{
+    content:"";position:absolute;left:-6px;top:6px;
+    width:10px;height:10px;border-radius:50%;background:var(--forest);
+  }
+  .timeline-item .years{font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--forest);margin:0 0 6px;}
+  .timeline-item h3{margin:0 0 8px;font-size:1.15rem;font-weight:600;}
+  .timeline-item p{margin:0;color:#3A423D;}
+
   .hero{
     padding:64px 0 56px;
     background-image:
@@ -115,6 +127,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -125,9 +138,7 @@
     <p class="kicker">// student portfolio</p>
     <h1>John Michael Asilo</h1>
     <img class="profile-photo" src="profile.jpg" alt="Portrait of John Michael Asilo">
-    <p>Bachelor of Science in Information Technology student at Caraga State University. I like building things that hold up under actual use — a
-      program that handles the edge case, a diagram that makes a messy idea click, a project that ships instead of
-      staying a draft.</p>
+    <p>BSIT student at Caraga State University, still exploring the world of programming and technology.</p>
     <div class="hero-links">
       <a class="btn primary" href="#projects">See my work</a>
       <a class="btn" href="mailto:asilojohnmichael297@gmail.com">Get in touch</a>
@@ -223,9 +234,32 @@
   </div>
 </section>
 
+<section id="experience">
+  <div class="wrap">
+    <p class="section-label">04 — experience</p>
+    <h2>Where I've been building</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <p class="years">2025 — 2029</p>
+        <h3>B.S. Information Technology · Caraga State University</h3>
+        <p>Working through the core IT curriculum — programming fundamentals, data management, and web
+          development — while using class projects as an excuse to actually build things rather than just study
+          them.</p>
+      </div>
+      <div class="timeline-item">
+        <p class="years">Ongoing</p>
+        <h3>Academic Projects</h3>
+        <p>Most of my project work runs on C and Java, with SQL for anything that needs structured data behind
+          it and HTML/CSS/JavaScript for the front end. I default to C when I want to actually understand what's
+          happening under the hood, and Java when a project needs proper object-oriented structure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="contact">
   <div class="wrap">
-    <p class="section-label">04 — contact</p>
+    <p class="section-label">05 — contact</p>
     <h2>Let's talk</h2>
     <p>Open to collaborating on projects, coursework partnerships, or just talking shop about code and data
       structures.</p>
