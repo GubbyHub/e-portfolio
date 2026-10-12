@@ -107,6 +107,47 @@
   .skills ul{margin:0;padding-left:18px;color:#3A423D;}
   .skills li{margin-bottom:4px;}
 
+  /* documents — dark band with three PDF viewers side by side */
+  #documents{
+    background:
+      linear-gradient(rgba(12,24,21,.88),rgba(12,24,21,.88)),
+      linear-gradient(var(--forest-dim) 1px, transparent 1px),
+      linear-gradient(90deg, var(--forest-dim) 1px, transparent 1px);
+    background-size:auto,34px 34px,34px 34px;
+    background-color:#0C1815;
+    border-bottom:none;
+    padding:64px 0 72px;
+  }
+  #documents .docs-wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+  #documents .section-label{color:var(--gold);text-align:center;}
+  #documents h2{
+    color:#fff;text-align:center;text-transform:uppercase;
+    letter-spacing:.02em;font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:40px;
+  }
+  .docs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  @media(max-width:900px){.docs-grid{grid-template-columns:1fr;max-width:460px;margin:0 auto;}}
+  .doc{margin:0;}
+  .doc-frame{
+    position:relative;background:#1c1c1c;
+    height:420px;border-radius:4px;overflow:hidden;
+    box-shadow:0 8px 28px rgba(0,0,0,.45);
+  }
+  .doc-frame iframe{width:100%;height:100%;border:0;background:#2a2a2a;display:block;}
+  .doc-open{
+    position:absolute;top:8px;right:22px;
+    width:36px;height:36px;display:flex;align-items:center;justify-content:center;
+    background:rgba(60,60,60,.88);color:#fff;border-radius:3px;
+    transition:background .15s;
+  }
+  .doc-open:hover{background:var(--gold);color:var(--ink);}
+  .doc-open svg{width:18px;height:18px;}
+  .doc figcaption{
+    text-align:center;color:#fff;margin-top:16px;
+    text-transform:uppercase;font-size:.95rem;letter-spacing:.03em;
+  }
+  .doc figcaption a{color:inherit;text-decoration:none;}
+  .doc figcaption a:hover{color:var(--gold);}
+
   /* contact — all rows share one font, size, color and zero indent so they line up flush-left */
   .contact-links{display:flex;flex-direction:column;gap:10px;margin-top:18px;}
   .contact-links a,.contact-links p{
@@ -128,6 +169,7 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#documents">Documents</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -255,9 +297,50 @@
   </div>
 </section>
 
+<section id="documents">
+  <div class="docs-wrap">
+    <p class="section-label">05 — documents</p>
+    <h2>My Documents</h2>
+
+    <div class="docs-grid">
+
+      <figure class="doc">
+        <div class="doc-frame">
+          <iframe src="documents/resume.pdf#toolbar=0&navpanes=0&view=FitH" title="Resume (PDF)" loading="lazy"></iframe>
+          <a class="doc-open" href="documents/resume.pdf" target="_blank" rel="noopener" aria-label="Open Resume in a new tab">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+          </a>
+        </div>
+        <figcaption><a href="documents/resume.pdf" target="_blank" rel="noopener">Resume</a></figcaption>
+      </figure>
+
+      <figure class="doc">
+        <div class="doc-frame">
+          <iframe src="documents/application-letter.pdf#toolbar=0&navpanes=0&view=FitH" title="Application Letter (PDF)" loading="lazy"></iframe>
+          <a class="doc-open" href="documents/application-letter.pdf" target="_blank" rel="noopener" aria-label="Open Application Letter in a new tab">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+          </a>
+        </div>
+        <figcaption><a href="documents/application-letter.pdf" target="_blank" rel="noopener">Application Letter</a></figcaption>
+      </figure>
+
+      <figure class="doc">
+        <div class="doc-frame">
+          <iframe src="documents/resume-designed.pdf#toolbar=0&navpanes=0&view=FitH" title="Resume, designed version (PDF)" loading="lazy"></iframe>
+          <a class="doc-open" href="documents/resume-designed.pdf" target="_blank" rel="noopener" aria-label="Open designed Resume in a new tab">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+          </a>
+        </div>
+        <figcaption><a href="documents/resume-designed.pdf" target="_blank" rel="noopener">Resume — Designed</a></figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
 <section id="contact">
   <div class="wrap">
-    <p class="section-label">05 — contact</p>
+    <p class="section-label">06 — contact</p>
     <h2>Let's talk</h2>
     <p>Open to collaborating on projects, coursework partnerships, or just talking shop about code and data
       structures.</p>
